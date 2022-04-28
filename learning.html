@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <meta author="rainrelaxme" content="rainrelaxme learning history">
+    <!--refresh in 5 sec-->
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <title>rainrelaxme's learning record</title>
+    <!--在标签栏中加入logo-->
+    <link rel="icon" href="./img/potato.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h2{
+            color:red;
+            background-color: aqua;
+        }
+      
+    </style>
+</head>  
+<body>
+        <h1>Example</h1>
+        <a id="tips">useful</a>
+        <p>this is a paragraph</p>
+        <hr>
+        <p>this is a paragraph</p>
+        <hr>
+        <p>this is a paragraph</p>
+        <hr><!--hr是一条分割线-->
+
+        <p>this<br/> is a paragraph</p><!--连续的空格及换行谨记做同一个-->
+        <h2>next i will write a poetry!</h2>
+        <p>春眠不觉晓<br/>
+            处处闻啼鸟<br/>
+            夜来风雨声<br/>
+            花落知多少<br/>
+        </p>
+
+        <h2>next 文本格式</h2>
+        <p>this is a <b>bold</b> text</p>
+        <p>this is a <i>italic</i> text</p>
+        <p>this is a <u>underline</u> text</p>
+        <p>this is a <s>strike</s> text</p>
+        <p>this is a <sub>subscript</sub> text</p>
+        <p>this is a <sup>superscript</sup> text</p>
+        <p>this is a <font color="red">font</font> text</p>
+        <p>this is a <font size="5">font</font> text</p>
+
+        <h2>next a标签链接</h2>
+        <p>a标签基础使用方式
+            <a href="http://www.baidu.com">百度</a><br/>
+            <a href="http://www.baidu.com" target="_blank">百度</a><br/>
+            <a href="http://www.baidu.com" target="_self">百度</a><br/>
+            <a href="http://www.baidu.com" target="_parent">百度</a><br/>
+            <a href="http://www.baidu.com" target="_top">百度</a><br/>
+
+            <a id="tips">useful</a>
+            <a href="#tips">这是一个链接</a><br/>
+            <a href="/html_learning/example.html#tips" >跳转到另一个页面的tips id</a>
+
+            <h3>利用本页面跳转，做一个目录</h3>
+            <a href="#chapter4">跳转到第四章</a>
+            <div>
+               <div>
+                <h4>chapter 1</h4>
+                <p>this is the content of chapter 1</p>
+                </p>
+               </div> 
+               <div>
+                <h4>chapter 2</h4>
+                <p>this is the content of chapter 2</p>
+                </p>
+               </div> 
+               <div>
+                <h4>chapter 3</h4>
+                <p>this is the content of chapter 3</p>
+                </p>
+               </div> 
+               <div id="chapter4">
+                <h4>chapter 4</h4>
+                <p>this is the content of chapter 4</p>
+                </p>
+               </div> 
+               <div>
+                <h4>chapter 5</h4>
+                <p>this is the content of chapter 5</p>
+                </p>
+               </div> 
+            </div>
+
+            <h3>send an email by a link></h3>
+            <!--注意空格使用%20，否则会存在无法识别内容的情况，标点符号同样-->
+            <a href="mailto:zxr1110.love@163.com?subject=hello&body=hello%20world">send an email</a>
+            <p>more complex content of sending an email,including 发送人、抄送人、密件抄送人</p>
+            <a href="mailto:zxr1110.love@163.com&cc=zxr1110.love@gmail.com&bcc=sz1110.love@gmail.com
+            ?subject=hello&body=hello,you are invited to my party">send an email</a>
+            
+        </p>
+</body>
+
+</html>
