@@ -8,7 +8,7 @@
     <title>rainrelaxme's learning record</title>
     <!--在标签栏中加入logo-->
     <link rel="icon" href="./img/potato.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <style>
         h2{
             color:red;
@@ -92,9 +92,35 @@
             <a href="mailto:zxr1110.love@163.com?subject=hello&body=hello%20world">send an email</a>
             <p>more complex content of sending an email,including 发送人、抄送人、密件抄送人</p>
             <a href="mailto:zxr1110.love@163.com&cc=zxr1110.love@gmail.com&bcc=sz1110.love@gmail.com
-            ?subject=hello&body=hello,you are invited to my party">send an email</a>
-            
+            ?subject=hello&body=hello,you are invited to my party">send an email</a>    
         </p>
+
+        <h2 style = "background-color: yellow;">next html css</h2>
+        <!--css will add to anywhere in the start -->
+        <body style="background-color:white;"><!--同一个标签，样式会一致，例如两个body-->
+            <p style="color: blue;">this is a paragraph</p>
+        </body>
+            <h3 style="text-align:center">next html css</h3>
+            <p style="color: blue;">this is a paragraph</p>
+
+        <h2> next about photograph</h2>
+        <p>
+           <img src="img/potato.jpg" alt="potato" width="200" ><!--alt意味告诉用户该图片的内容，可以在无法出现图片时作为提示-->
+            <img src="./img/potato.jpg" alt="potato" width="200" ><!--相对路径，相对于当前文件夹-->
+            <img src="../" alt="potato" width="200" ><!--相对路径，相对于当前文件夹的上一级-->
+            <img src="../../../img/potato.jpg" alt="potato" width="200" ><!--相对路径，相对于当前文件夹的上上一级-->
+            <img src="http://www.baidu.com/img/potato.jpg" alt="potato" width="200" ><!--绝对路径，以http开头，域名后面的路径-->
+            <img src="https://www.baidu.com/img/potato.jpg" alt="potato" width="200" ><!--绝对路径，以https开头，域名后面的路径-->
+            <!--img map-->
+            <p style="border:solid;border-width: 1px;">the size of the picture is 250*640</p>
+            <img src="./img/人的眼光.jpg" alt = "sight of man" width="250" usemap="#sightmap">
+            <map name = "sightmap">
+                <area shape="rect" coords="0,0,250,200" alt = "high" href="./high.html">
+                <area shape = "circle" coords="100,300,100" alt = "middle cirle" href = "./middle.html">
+                <area shape="poly" coords="250,0,250,200,0,200" alt = "low" href="./low.html"><!--poly what?-->
+            </map>
+        </p>
+              
 </body>
 
 </html>
