@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta  charset="utf-8">
+    <meta charset="utf-8">
     <meta author="rainrelaxme" content="rainrelaxme learning history">
     <!--refresh in 5 sec-->
     <!-- <meta http-equiv="refresh" content="5"> -->
@@ -10,198 +11,210 @@
     <link rel="icon" href="./img/potato.jpg" type="image/x-icon">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <style>
-        h2{
-            color:red;
+        h2 {
+            color: red;
             background-color: aqua;
         }
-      
     </style>
-</head>  
+</head>
+
 <body>
-        <h1>Example</h1>
+    <h1>Example</h1>
+    <a id="tips">useful</a>
+    <p>this is a paragraph</p>
+    <hr>
+    <p>this is a paragraph</p>
+    <hr>
+    <p>this is a paragraph</p>
+    <hr>
+    <!--hr是一条分割线-->
+
+    <p>this<br /> is a paragraph</p>
+    <!--连续的空格及换行谨记做同一个-->
+    <h2>next i will write a poetry!</h2>
+    <p>春眠不觉晓<br />
+        处处闻啼鸟<br />
+        夜来风雨声<br />
+        花落知多少<br />
+    </p>
+
+    <h2>next 文本格式</h2>
+    <p>this is a <b>bold</b> text</p>
+    <p>this is a <i>italic</i> text</p>
+    <p>this is a <u>underline</u> text</p>
+    <p>this is a <s>strike</s> text</p>
+    <p>this is a <sub>subscript</sub> text</p>
+    <p>this is a <sup>superscript</sup> text</p>
+    <p>this is a <font color="red">font</font> text</p>
+    <p>this is a <font size="5">font</font> text</p>
+
+    <h2>next a标签链接</h2>
+    <p>a标签基础使用方式
+        <a href="http://www.baidu.com">百度</a><br />
+        <a href="http://www.baidu.com" target="_blank">百度</a><br />
+        <a href="http://www.baidu.com" target="_self">百度</a><br />
+        <a href="http://www.baidu.com" target="_parent">百度</a><br />
+        <a href="http://www.baidu.com" target="_top">百度</a><br />
+
         <a id="tips">useful</a>
-        <p>this is a paragraph</p>
-        <hr>
-        <p>this is a paragraph</p>
-        <hr>
-        <p>this is a paragraph</p>
-        <hr><!--hr是一条分割线-->
+        <a href="#tips">这是一个链接</a><br />
+        <a href="/html_learning/example.html#tips">跳转到另一个页面的tips id</a>
 
-        <p>this<br/> is a paragraph</p><!--连续的空格及换行谨记做同一个-->
-        <h2>next i will write a poetry!</h2>
-        <p>春眠不觉晓<br/>
-            处处闻啼鸟<br/>
-            夜来风雨声<br/>
-            花落知多少<br/>
-        </p>
+    <h3>利用本页面跳转，做一个目录</h3>
+    <a href="#chapter4">跳转到第四章</a>
+    <div>
+        <div>
+            <h4>chapter 1</h4>
+            <p>this is the content of chapter 1</p>
+        </div>
+        <div>
+            <h4>chapter 2</h4>
+            <p>this is the content of chapter 2</p>
+        </div>
+        <div>
+            <h4>chapter 3</h4>
+            <p>this is the content of chapter 3</p>
+        </div>
+        <div id="chapter4">
+            <h4>chapter 4</h4>
+            <p>this is the content of chapter 4</p>
+        </div>
+        <div>
+            <h4>chapter 5</h4>
+            <p>this is the content of chapter 5</p>
+        </div>
+    </div>
 
-        <h2>next 文本格式</h2>
-        <p>this is a <b>bold</b> text</p>
-        <p>this is a <i>italic</i> text</p>
-        <p>this is a <u>underline</u> text</p>
-        <p>this is a <s>strike</s> text</p>
-        <p>this is a <sub>subscript</sub> text</p>
-        <p>this is a <sup>superscript</sup> text</p>
-        <p>this is a <font color="red">font</font> text</p>
-        <p>this is a <font size="5">font</font> text</p>
+    <h3>send an email by a link></h3>
+    <!--注意空格使用%20，否则会存在无法识别内容的情况，标点符号同样-->
+    <a href="mailto:zxr1110.love@163.com?subject=hello&body=hello%20world">send an email</a>
+    <p>more complex content of sending an email,including 发送人、抄送人、密件抄送人</p>
+    <a href="mailto:zxr1110.love@163.com&cc=zxr1110.love@gmail.com&bcc=sz1110.love@gmail.com
+            ?subject=hello&body=hello,you are invited to my party">send an email</a>
+    </p>
 
-        <h2>next a标签链接</h2>
-        <p>a标签基础使用方式
-            <a href="http://www.baidu.com">百度</a><br/>
-            <a href="http://www.baidu.com" target="_blank">百度</a><br/>
-            <a href="http://www.baidu.com" target="_self">百度</a><br/>
-            <a href="http://www.baidu.com" target="_parent">百度</a><br/>
-            <a href="http://www.baidu.com" target="_top">百度</a><br/>
+    <h2 style="background-color: yellow;">next html css</h2>
+    <!--css will add to anywhere in the start -->
 
-            <a id="tips">useful</a>
-            <a href="#tips">这是一个链接</a><br/>
-            <a href="/html_learning/example.html#tips" >跳转到另一个页面的tips id</a>
+    <body style="background-color:white;">
+        <!--同一个标签，样式会一致，例如两个body-->
+        <p style="color: blue;">this is a paragraph</p>
+    </body>
+    <h3 style="text-align:center">next html css</h3>
+    <p style="color: blue;">this is a paragraph</p>
 
-            <h3>利用本页面跳转，做一个目录</h3>
-            <a href="#chapter4">跳转到第四章</a>
-            <div>
-               <div>
-                <h4>chapter 1</h4>
-                <p>this is the content of chapter 1</p>
-               </div> 
-               <div>
-                <h4>chapter 2</h4>
-                <p>this is the content of chapter 2</p>
-               </div> 
-               <div>
-                <h4>chapter 3</h4>
-                <p>this is the content of chapter 3</p>
-               </div> 
-               <div id="chapter4">
-                <h4>chapter 4</h4>
-                <p>this is the content of chapter 4</p>
-               </div> 
-               <div>
-                <h4>chapter 5</h4>
-                <p>this is the content of chapter 5</p>
-               </div> 
-            </div>
+    <h2> next about photograph</h2>
+    <p>
+        <img src="img/potato.jpg" alt="potato" width="200">
+        <!--alt意味告诉用户该图片的内容，可以在无法出现图片时作为提示-->
+        <img src="./img/potato.jpg" alt="potato" width="200">
+        <!--相对路径，相对于当前文件夹-->
+        <img src="../" alt="potato" width="200">
+        <!--相对路径，相对于当前文件夹的上一级-->
+        <img src="../../../img/potato.jpg" alt="potato" width="200">
+        <!--相对路径，相对于当前文件夹的上上一级-->
+        <img src="http://www.baidu.com/img/potato.jpg" alt="potato" width="200">
+        <!--绝对路径，以http开头，域名后面的路径-->
+        <img src="https://www.baidu.com/img/potato.jpg" alt="potato" width="200">
+        <!--绝对路径，以https开头，域名后面的路径-->
+        <!--img map-->
+    <p style="border:solid;border-width: 1px;">the size of the picture is 250*640</p>
+    <img src="./img/人的眼光.jpg" alt="sight of man" width="250" usemap="#sightmap">
+    <map name="sightmap">
+        <area shape="rect" coords="0,0,250,200" alt="high" href="./high.html">
+        <area shape="circle" coords="100,300,100" alt="middle cirle" href="./middle.html">
+        <area shape="poly" coords="250,0,250,200,0,200" alt="low" href="./low.html">
+        <!--poly what?-->
+    </map>
+    </p>
 
-            <h3>send an email by a link></h3>
-            <!--注意空格使用%20，否则会存在无法识别内容的情况，标点符号同样-->
-            <a href="mailto:zxr1110.love@163.com?subject=hello&body=hello%20world">send an email</a>
-            <p>more complex content of sending an email,including 发送人、抄送人、密件抄送人</p>
-            <a href="mailto:zxr1110.love@163.com&cc=zxr1110.love@gmail.com&bcc=sz1110.love@gmail.com
-            ?subject=hello&body=hello,you are invited to my party">send an email</a>    
-        </p>
+    <h2 style="text-align:center">next about table not form</h2>
+    <p>
 
-        <h2 style = "background-color: yellow;">next html css</h2>
-        <!--css will add to anywhere in the start -->
-        <body style="background-color:white;"><!--同一个标签，样式会一致，例如两个body-->
-            <p style="color: blue;">this is a paragraph</p>
-        </body>
-            <h3 style="text-align:center">next html css</h3>
-            <p style="color: blue;">this is a paragraph</p>
+    <table border="1">
+        <!--tr是行，th是表头，td是正文-->
+        <caption>this is a table</caption>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>introduction</th>
+        </tr>
+        <tr>
+            <td>zxr</td>
+            <td>18</td>
+            <td>zxr is a student</td>
+        </tr>
+        <tr>
+            <td>刘亦菲</td>
+            <td>18</td>
+            <td>灵儿妹妹！</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <table border="1">
+        <!--colspan-->
+        <caption>colspan</caption>
+        <tr>
+            <th>name</th>
+            <th colspan="2">telephone</th>
+        </tr>
+        <tr>
+            <td>shawn</td>
+            <td>13888888888</td>
+            <td>13999999999</td>
+        </tr>
+    </table>
+    <br />
+    <table border="1">
+        <!--rowspan-->
+        <caption>rowspan</caption>
+        <tr>
+            <th>name</th>
+            <th>telephone</th>
+        </tr>
+        <tr>
+            <td rowspan="2">shawn</td>
+            <td>13888888888</td>
+        </tr>
+        <tr>
+            <td>13999999999</td>
+        </tr>
+    </table>
+    <h3>a beautiful table</h3>
+    <div>
+        <p class="">受理员业务统计表</p>
+    </div>
+    </p>
 
-        <h2> next about photograph</h2>
-        <p>
-           <img src="img/potato.jpg" alt="potato" width="200" ><!--alt意味告诉用户该图片的内容，可以在无法出现图片时作为提示-->
-            <img src="./img/potato.jpg" alt="potato" width="200" ><!--相对路径，相对于当前文件夹-->
-            <img src="../" alt="potato" width="200" ><!--相对路径，相对于当前文件夹的上一级-->
-            <img src="../../../img/potato.jpg" alt="potato" width="200" ><!--相对路径，相对于当前文件夹的上上一级-->
-            <img src="http://www.baidu.com/img/potato.jpg" alt="potato" width="200" ><!--绝对路径，以http开头，域名后面的路径-->
-            <img src="https://www.baidu.com/img/potato.jpg" alt="potato" width="200" ><!--绝对路径，以https开头，域名后面的路径-->
-            <!--img map-->
-            <p style="border:solid;border-width: 1px;">the size of the picture is 250*640</p>
-            <img src="./img/人的眼光.jpg" alt = "sight of man" width="250" usemap="#sightmap">
-            <map name = "sightmap">
-                <area shape="rect" coords="0,0,250,200" alt = "high" href="./high.html">
-                <area shape = "circle" coords="100,300,100" alt = "middle cirle" href = "./middle.html">
-                <area shape="poly" coords="250,0,250,200,0,200" alt = "low" href="./low.html"><!--poly what?-->
-            </map>
-        </p>
-              
-        <h2 style="text-align:center">next about table not form</h2>
-        <p>
-        
-           <table border="1">
-               <!--tr是行，th是表头，td是正文-->
-               <caption>this is a table</caption>
-                <tr>
-                    <th>name</th>
-                    <th>age</th>
-                    <th>introduction</th>
-                </tr>
-                <tr>
-                    <td>zxr</td>
-                    <td>18</td>
-                    <td>zxr is a student</td>
-                </tr>
-                <tr>
-                    <td>刘亦菲</td>
-                    <td>18</td>
-                    <td>灵儿妹妹！</td>
-                </tr>
-           </table>
-           <br/>
-           <br/>
-           <table border="1">
-               <!--colspan-->
-            <caption>colspan</caption>              
-            <tr>
-                  <th>name</th>
-                  <th colspan="2">telephone</th>
-              </tr>
-              <tr>
-                  <td>shawn</td>
-                  <td>13888888888</td>
-                  <td>13999999999</td>
-                </tr>
-                </table>
-                <br/>
-            <table border="1">
-               <!--rowspan-->   
-                <caption>rowspan</caption>
-                <tr>
-                    <th>name</th>
-                    <th>telephone</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">shawn</td>
-                    <td>13888888888</td>
-                </tr>
-                <tr>
-                    <td>13999999999</td>
-                </tr>
-            </table>
-            <h3>a beautiful table</h3>
-            <div>
-                <p class = "">受理员业务统计表</p>
-            </div>
-        </p>
-
-        <h2>next about list</h2>
-        <p>
-        <h3>it is a disord list </h3>
-            <ul>
-                <li>Coffee</li>
-                <dd>A drink made from roasted coffee beans</dd><!--li也可以添加描述-->
-                <li>Tea</li>
-                <li>Milk</li>
-            </ul>
-        <h3>it is a ord list </h3>
-        <!--前方序号有多种方式，以type = “a”为标准，看注释-->
-            <ol type = “I”>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-            </ol>
-        <h3>it is a definition lists        </h3>
-            <dl>
-                <dt>Coffee</dt>
-                <dd>A drink made from roasted coffee beans</dd>
-                <dt>Tea</dt>
-                <dd>A drink made from leaves of the tea plant</dd>
-                <dt>Milk</dt>
-                <dd>A drink made from the milk of mammals</dd>
-            </dl>
-        </p>
-        <!--
+    <h2>next about list</h2>
+    <p>
+    <h3>it is a disord list </h3>
+    <ul>
+        <li>Coffee</li>
+        <dd>A drink made from roasted coffee beans</dd>
+        <!--li也可以添加描述-->
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h3>it is a ord list </h3>
+    <!--前方序号有多种方式，以type = “a”为标准，看注释-->
+    <ol type=“I”>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <h3>it is a definition lists </h3>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>A drink made from roasted coffee beans</dd>
+        <dt>Tea</dt>
+        <dd>A drink made from leaves of the tea plant</dd>
+        <dt>Milk</dt>
+        <dd>A drink made from the milk of mammals</dd>
+    </dl>
+    </p>
+    <!--
             ul是unordered lists的缩写 (无序列表)
 
             li是list item的缩写 （列表项目）
@@ -222,52 +235,109 @@
 
             td是table data cell的缩写 （表格中的一个单元格）-->
 
-        <h2>next about div & span</h2>
-        <p>
-        <div>
-            div是块级元素，浏览器会在前后拆行
-        </div>
-        <div>
-            div是块级元素，浏览器会在前后拆行
-        </div>
-        <span>
-            span是非块级元素，浏览器不会在前后拆行
-        </span>
-        <span>
-            span是非块级元素，浏览器不会在前后拆行
-        </span>
-        </p>
+    <h2>next about div & span</h2>
+    <p>
+    <div>
+        div是块级元素，浏览器会在前后拆行
+    </div>
+    <div>
+        div是块级元素，浏览器会在前后拆行
+    </div>
+    <span>
+        span是非块级元素，浏览器不会在前后拆行
+    </span>
+    <span>
+        span是非块级元素，浏览器不会在前后拆行
+    </span>
+    </p>
 
-        <h2>next about layout</h2>
-        <div id = "container" style = "width: 500px;">
-            <div id = "header" style = "background-color: #FFA500;">
-                <h1 style = "margin-bottom:0;">main website topic</h1></div>
-            <div id = "menu" style = "background-color: #ffd700; height: 200px; width: 100px; float: left;">
-                <b>菜单</b><br/>
-                HTML<br/>
-                CSS<br>
-                JavaScript</div>
-            <div id = "content" style="background-color: #eeeeee; height: 200px; width: 400px; float: left;">
-                内容在这里
-            </div>
-            <div id = "fotter" style = "background-color: #FFA500;clear:both; text-align: center;">
-                版权©rainrelaxme
-            </div>
+    <h2>next about layout</h2>
+    <div id="container" style="width: 500px;">
+        <div id="header" style="background-color: #FFA500;">
+            <h1 style="margin-bottom:0;">main website topic</h1>
         </div>
-        
-        <h2>next about form</form></h2>
-        <div>
-            <form>
-                Username:<input type = "text" name = "user"><br>
-                Password:<input type = "password" name = "password"><br>
-            </form>
+        <div id="menu" style="background-color: #ffd700; height: 200px; width: 100px; float: left;">
+            <b>菜单</b><br />
+            HTML<br />
+            CSS<br>
+            JavaScript
         </div>
-        <div>submit botton
-            <form name="input" action = "text.txt" method = "get">
-                Username:<input type = "text" name = "user">
-                <input type = "submit" value="submit">
-            </form>
+        <div id="content" style="background-color: #eeeeee; height: 200px; width: 400px; float: left;">
+            内容在这里
+        </div>
+        <div id="fotter" style="background-color: #FFA500;clear:both; text-align: center;">
+            版权©rainrelaxme
+        </div>
+    </div>
 
-        </div>
+    <h2>next about form</form>
+    </h2>
+    <div>
+        <form>
+            Username:<input type="text" name="user"><br>
+            Password:<input type="password" name="password"><br>
+        </form>
+    </div>
+    <div>submit button
+        <form name="input" action="html_form_action.php" method="get">
+            Username:<input type="text" name="user">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <!--单选框-->
+    <div>
+        <form>
+            <input type="radio" name="sex" value="male">Male<br>
+            <input type="radio" name="sex" value="female">Female
+        </form>
+    </div>
+    <!--多选框-->
+    <div>
+        <form>
+            <input type="checkbox" name=vehicle value="car">I have a car!<br>
+            <input type="checkbox" name=vehicle value="bike">I have a bike!<br>
+        </form>
+    </div>
+    <!--下拉列表-->
+    <div>
+        <form>
+            <select name = "car">
+                <option value = "benz">奔驰</option>
+                <option value = "bmw">宝马</option>
+                <option value = "audi">奥迪</option>
+                <option value = "poersche" selected>保时捷</option>
+            </select>
+        </form>
+    </div>
+    <!--OPTION GROUP-->
+    <div>
+        <form action="">
+            
+        </form>
+    </div>
+    <!--发送表单到demo-form-->
+    <div>
+        <form method="get" action = "demo-form.php">
+            Name:<input type = "text" name = "name" value = "">
+            <br>
+            password:<input type = "text" name = "password" value = "">
+            <br>
+            <input type="submit" value = "go">
+        </form>
+    </div>
+    <!--send email by form-->
+    <div>
+        <form action = "Mailto:zxr11110.love@163.com?subject=send email by form&cc=zxr1110.love@gmail.com" method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text" name = "name" value = "please input your name"><br>
+            E-mail:<br>
+            <input type = "text" name = "mail" value = "please input your email address"><br>
+            Content:<br>
+            <input type = "text" name = "content" value = "please input your content"><br>
+            <button>发送</button>
+            <input type = "reset" value = "reset">
+        </form>
+    </div>
 </body>
+
 </html>
