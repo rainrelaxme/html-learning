@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta author="rainrelaxme" content="rainrelaxme learning history">
+    <title>html5 - rainrelaxme's learning record</title>
+    <link rel="icon" href="./img/potato.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <h1>learning html5</h1>
+    <h2>about canvas</h2>
+    <div>
+        <canvas id="myCanvas" width="200" height="200" style="border: 1px solid #000000">
+        </canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#ff0000";//方法名字不能错，区分大小写，fillstyle不行，下面类似
+            ctx.fillRect(0, 0, 150, 75);
+
+            //绘制线段
+            ctx.moveTo(0, 0);
+            ctx.lineTo(200, 100);
+            ctx.stroke();
+
+            //绘制圆形
+            ctx.beginPath();
+            ctx.arc(95, 50, 20, 0, 2 * Math.PI);//Math.PI 即代表pi
+            ctx.stroke();
+        </script>
+
+        <canvas id="myCanvas2" width="200" height="200" style="border: 1px solid #000000">
+        </canvas>
+        <script>
+            var d = document.getElementById("myCanvas2");
+            var dtx = d.getContext("2d");
+            //文本-实心-空心
+            dtx.font = "30px Arial";
+            dtx.fillText("hello world", 10, 50);
+            dtx.strokeText("hello world", 10, 150);
+        </script>
+        <br/>
+
+        <p>image to use:</p>
+        <img id = "scream" src="img/forever memory.jpeg" alt = "the picture" width = "200"><br/>
+        <p>drawImage in canvas:</p>
+        <canvas id="myCanvas3" width="200" height="200" style="border: 1px solid #000000">
+        </canvas>
+        
+        <script>
+            var e = document.getElementById("myCanvas3");
+            var etx = e.getContext("2d");
+            var img1 = document.getElementById("scream")
+            //插入图片
+            img.onload = function()
+            {
+                etx.drawImage(img1, 10, 10 )
+            }
+
+        </script>
+    </div>
+
+
+
+</body>
+
+</html>
