@@ -301,43 +301,115 @@
     <!--下拉列表-->
     <div>
         <form>
-            <select name = "car">
-                <option value = "benz">奔驰</option>
-                <option value = "bmw">宝马</option>
-                <option value = "audi">奥迪</option>
-                <option value = "poersche" selected>保时捷</option>
+            <select name="car">
+                <option value="benz">奔驰</option>
+                <option value="bmw">宝马</option>
+                <option value="audi">奥迪</option>
+                <option value="poersche" selected>保时捷</option>
             </select>
         </form>
     </div>
     <!--OPTION GROUP-->
     <div>
         <form action="">
-            
+
         </form>
     </div>
     <!--发送表单到demo-form-->
     <div>
-        <form method="get" action = "demo-form.php">
-            Name:<input type = "text" name = "name" value = "">
+        <form method="get" action="demo-form.php">
+            Name:<input type="text" name="name" value="">
             <br>
-            password:<input type = "text" name = "password" value = "">
+            password:<input type="text" name="password" value="">
             <br>
-            <input type="submit" value = "go">
+            <input type="submit" value="go">
         </form>
     </div>
     <!--send email by form-->
     <div>
-        <form action = "Mailto:zxr11110.love@163.com?subject=send email by form&cc=zxr1110.love@gmail.com" method="post" enctype="text/plain">
+        <form action="Mailto:zxr11110.love@163.com?subject=send email by form&cc=zxr1110.love@gmail.com" method="post"
+            enctype="text/plain">
             Name:<br>
-            <input type="text" name = "name" value = "please input your name"><br>
+            <input type="text" name="name" value="please input your name"><br>
             E-mail:<br>
-            <input type = "text" name = "mail" value = "please input your email address"><br>
+            <input type="text" name="mail" value="please input your email address"><br>
             Content:<br>
-            <input type = "text" name = "content" value = "please input your content"><br>
+            <input type="text" name="content" value="please input your content"><br>
             <button>发送</button>
-            <input type = "reset" value = "reset">
+            <input type="reset" value="reset">
         </form>
     </div>
+    <h2>next about iframe</h2>
+    <div>
+        <iframe loading="lazy" src="high.html" width="200" height="200">hello</iframe>
+        <!--什么是懒加载？-->
+        <!--懒加载也叫延迟加载，指的是在长网页中延迟加载图像，是一种很好优化网页性能的方式。-->
+    </div>
+    <div>
+        <iframe src="high.html" name="iframe_a"></iframe>
+        <p><a href="http://www.runoob.com" target="iframe_a" rel="noopener"> RUNOOB.COM </a></p>
+        <!--target 是目标变换的位置-->
+        <!--出于有些网页不希望被嵌套, 响应头中有一选项
+
+            X-Frame-Options
+            他有三个可配置值
+
+            DENY：表示该网站页面不允许被嵌套，即便是在自己的域名的页面中也不能进行嵌套。
+            SAMEORIGIN：表示该页面可以在相同域名页面中被嵌套展示。
+            ALLOW-FROM uri：表示该页面可以在指定来源页面中进行嵌套展示。-->
+    </div>
+    <h2>next about html script</h2>
+    <div>
+        <script>document.write("hello world")</script>
+        <noscript>抱歉，你的浏览器不支持JavaScript！</noscript>
+    </div>
+    <!--javascript 展示-->
+
+    <div>
+        通过js直接输出内容：
+        <script>
+            document.write("<h3>这是一个三级标题</h3>")
+        </script>
+    </div>
+    <div>
+        通过js触发点击事件：
+        <!--function写在script里面，外部进行调用-->
+        <p id="demo">JavaScript可以触发事件，例如按钮</p>
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "hello javascript!";
+            }
+        </script>
+        <button type="button" onclick="myFunction()">click me</button>
+    </div><br>
+    <div>
+        通过js触更改页面样式：
+        <!--function写在script里面，外部进行调用-->
+        <p id="demostyle">JavaScript更改HTML元素样式</p>
+        <script>
+            function myFunction2() {
+                x = document.getElementById("demostyle"); //方法里的注释，不一样//找到元素
+                x.style.color = "#ff0000";
+            }
+        </script>
+        <button type="button" onclick="myFunction2()">click me</button>
+    </div>
+    <h2>next about 字符实体</h2>
+    <div>
+        显示小于号：
+        &lt
+        &#60
+        &#060
+    </div>
+    <div>
+        不间断空格，使用"NBSP"：non-breaking space
+        <br>
+        start            end(只显示一个空格)
+        <br>
+        start &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end(five space)
+    </div>
+
+
 </body>
 
 </html>
