@@ -7,6 +7,28 @@
     <title>html5 - rainrelaxme's learning record</title>
     <link rel="icon" href="./img/potato.jpg" type="image/x-icon">
 </head>
+<style>
+    /* 使用方法 */
+    #circle64 {
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        /*border三个可以并到一起*/
+        border: 1px;
+        border: #000000;
+        border: solid;
+    }
+
+    #div1,
+    #div2 {
+        float: left;
+        width: 100px;
+        height: 35px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+</style>
 
 <body>
     <h1>learning html5</h1>
@@ -41,25 +63,295 @@
             dtx.fillText("hello world", 10, 50);
             dtx.strokeText("hello world", 10, 150);
         </script>
-        <br/>
+        <br />
 
         <p>image to use:</p>
-        <img id = "scream" src="img/forever memory.jpeg" alt = "the picture" width = "200"><br/>
+        <img id="scream" src="img/forever memory.jpeg" alt="the picture" width="200" height="200"><br />
         <p>drawImage in canvas:</p>
-        <canvas id="myCanvas3" width="200" height="200" style="border: 1px solid #000000">
-        </canvas>
-        
+        <canvas id="myCanvas3" width="300" height="300" style="border: 1px solid #9e9d9d">您的浏览器不支持HTML5 canvas!</canvas>
+
         <script>
             var e = document.getElementById("myCanvas3");
             var etx = e.getContext("2d");
             var img1 = document.getElementById("scream")
             //插入图片
-            img.onload = function()
-            {
-                etx.drawImage(img1, 10, 10 )
+            img1.onload = function () {
+                etx.drawImage(img1, 10, 10, 280, 280);//drawImage(image, x, y, width, height)
+            }
+        </script>
+    </div>
+
+    <h2>next about SVG</h2>
+    <div id="circle64">
+        <svg id="newsvg" xmlns="http://www.w3.org/2000/svg" version="1.1" height=200>
+            <circle cx="100" cy="100" r="80" stroke="yellow" stroke-width="2" fill="red">svg circle</circle>
+        </svg>
+    </div>
+
+    <h2>next about mathml</h2>
+    <div>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <!--应该是平方-->
+            <!--address:https://www.runoob.com/html/html5-mathml.html-->
+            <mrow>
+                <msup>
+                    <mi>a</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo>+</mo>
+
+                <msup>
+                    <mi>b</mi>
+                    <mn>2</mn>
+                </msup>
+                <mo>=</mo>
+
+                <msup>
+                    <mi>c</mi>
+                    <mn>2</mn>
+                </msup>
+            </mrow>
+        </math>
+    </div>
+
+    <h2>next about drag object</h2>
+    <p>参考说明：https://www.runoob.com/html/html5-draganddrop.html</p>
+    <div>
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
             }
 
+            function drag(ev) {
+                ev.dataTransfer.setData("Text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("Text");
+                ev.target.appendChild(document.getElementById(data));
+            }
         </script>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="img/potato.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+        </div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <h2>next about current location</h2>
+    <p>参考说明：https://www.runoob.com/html/html5-geolocation.html</p>
+    <div>
+        <p>baidu example</p>
+        <input type="button" onclick="getLocation()" value="确认" />
+        <div id="position"></div>
+        <script type="text/javascript">
+            var x = document.getElementById('position');
+            function getLocation() {
+                // 创建百度地理位置实例，代替 navigator.geolocation
+                var geolocation = new BMap.Geolocation();
+                geolocation.getCurrentPosition(function (e) {
+                    if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                        // 百度 geolocation 的经纬度属性不同，此处是 point.lat 而不是 coords.latitude
+                        x.innerHTML = '纬度：' + e.point.lat + '<br/>经度：' + e.point.lng;
+                    } else {
+                        x.innerHTML = 'failed' + this.getStatus();
+                    }
+                });
+            }
+        </script>
+    </div>
+
+    <h2>next about play video</h2>
+    <p>参考说明：https://www.runoob.com/html/html5-video.html</p>
+    <div style="text-align: center;">
+        <button onclick="playPause()">播放/暂停</button>
+        <button onclick="makeBig()">放大</button>
+        <button onclick="makeSmall()">缩小</button>
+        <button onclick="makeNormal()">普通</button>
+        <br />
+        <video id="video1" width="420" controls>
+            <source src="./video/1.mp4" type="video/mp4">
+            您的浏览器不支持HTML5 video标签。
+        </video>
+        <script>
+            var myVideo = document.getElementById("video1");
+
+            function playPause() {
+                if (myVideo.paused)
+                    myVideo.play();
+                else
+                    myVideo.pause();
+            }
+
+            function makeBig() {
+                myVideo.width = 560;
+            }
+
+            function makeSmall() {
+                myVideo.width = 320;
+            }
+
+            function makeNormal() {
+                myVideo.width = 420;
+            } 
+        </script>
+    </div>
+
+    <h2>next about input type</h2>
+    <p>参考说明：<a href="https://www.runoob.com/html/html5-form-input-types.html">点我</a></p>
+
+    <div>
+        <form action="https://www.runoob.com/try/demo_source/demo-form.php">
+            birthday:<input type="date" name="bday">
+            <input type="submit" value="hello">
+        </form>
+    </div>
+    <div>
+        <form action="https://www.runoob.com/try/demo_source/demo-form.php">
+            birthday & time: <input type="datetime-local" name="bdaytime">
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <div>
+        <form action="https://www.runoob.com/try/demo_source/demo-form.php">
+            数量（1到5之间）：<input type="number" ; name="quantity" ; min="1" ; max="5" ; disabled>
+            <!--disabled	规定输入字段是禁用的
+                max	        规定允许的最大值
+                maxlength	规定输入字段的最大字符长度
+                min	        规定允许的最小值
+                pattern	    规定用于验证输入字段的模式
+                readonly	规定输入字段的值无法修改
+                required	规定输入字段的值是必需的
+                size	    规定输入字段中的可见字符数
+                step	    规定输入字段的合法数字间隔
+                value	    规定输入字段的默认值-->
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form action="https://www.runoob.com/try/demo_source/demo-form.php">
+            滑动条：<input type="range" ; name="points" min=1; max=50; step="5" ; value="57" ;>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form action="https://www.runoob.com/try/demo_source/demo-form.php">
+            search：<input type="search" ; name="googlesearch" value="whishaw">
+            <input type="submit" formtarget="blank">
+        </form>
+    </div>
+
+    <p>新的表单元素：
+        <a href="https://www.runoob.com/html/html5-form-elements.html">datalist</a>
+        <a href="https://www.runoob.com/html/html5-form-elements.html">keygen</a>
+        <a href="https://www.runoob.com/html/html5-form-elements.html">output</a>
+    </p>
+
+    <p>新的表单属性：
+        <a href="https://www.runoob.com/html/html5-form-attributes.html">点我</a>
+        <br />
+        form新属性：<br />
+        autocomplete<br />
+        novalidate<br /><br />
+
+        input新属性：<br />
+        autocomplete<br />
+        autofocus<br />
+        form<br />
+        formaction<br />
+        formenctype<br />
+        formmethod<br />
+        formnovalidate<br />
+        formtarget<br />
+        height 与 width<br />
+        list<br />
+        min 与 max<br />
+        multiple<br />
+        pattern (regexp)<br />
+        placeholder<br />
+        required<br />
+        step<br />
+    </p>
+
+    <h2>next about 语义元素</h2>
+    <div>
+        <a href="https://www.runoob.com/html/html5-semantic-elements.html">点我</a>
+    </div>
+
+    <h2>next about web storage:local storage & session storage</h2>
+    <dl>
+        <li>localStorage</li>
+        <dd>用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去除。</dd>
+        <li>sessionStorage</li>
+        <dd>用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据。</dd>
+    </dl>
+    <div>
+        <!--首先检查浏览器是否支持localStorage 和 sessionStorage-->
+        <div id="storagetest">storagetes</div>
+        <script>
+            if (typeof (Storage) !== "undefined") {
+                //存储
+                localStorage.setItem("sitename", "rainrelaxme");
+                document.getElementById("storagetest").innerHTML = "网站名:" + localStorage.getItem("sitename");
+            }
+            else {
+                document.getElementById("storagetest").innerHTML = "sorry, your brower can not store data by web!"
+            }
+            localStorage.removeItem("sitename")
+        </script>
+        <!--不管是 localStorage，还是 sessionStorage，可使用的API都相同，常用的有如下几个（以localStorage为例）：
+            保存数据：localStorage.setItem(key,value);
+            读取数据：localStorage.getItem(key);
+            删除单个数据：localStorage.removeItem(key);
+            删除所有数据：localStorage.clear();
+            得到某个索引的key：localStorage.key(index);-->
+    </div>
+    <div>
+        <p>then wtite a script about localStorage by myself</p>
+        <p>count machine</p>
+        <button onclick="clickcount()" type="button">计数</button>
+        <div id="countshow"></div>
+        <p>点击该按钮查看计数器的增加<br />
+            关闭浏览器选项卡(或窗口),重新打开此页面,计数器将继续计数(不是重置)。</p>
+        <script>
+            function clickcount() {
+                if (typeof (Storage) !== "undefined") {
+                    if (localStorage.counttext) {
+                        localStorage.counttext ++;
+                        console.log(localStorage.counttext);
+                    }
+                    else {
+                        localStorage.counttext = 1;
+                    }
+
+                    document.getElementById("countshow").innerHTML = "你已经点击了按钮" + localStorage.counttext + "次";
+
+                    
+                }
+                else {
+                    document.getElementById("countshow").innerHTML = "sorry, your brower can not store data by web!"
+                }
+                
+
+            }
+            console.log(localStorage.counttext);
+        </script>
+        <script>
+            function count(countnumber){
+                //计数
+                countnumber ++;
+                return countnumber;
+            }
+            // console.log(count(1),count(2))
+
+            
+            // function f(x, y) {  //定义函数
+            //     return x * y;  //返回值
+            // }
+            // console.log(f(f(5, 6), f(7, 8)));  //返回1680。重复调用函数
+        </script>
+
+
     </div>
 
 
