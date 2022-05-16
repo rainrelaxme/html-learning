@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta author="rainrelaxme" content="rainrelaxme learning history">
     <title>CSS - rainrelaxme's learning record </title>
+
     <link rel="icon" href="./img/logo.png" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" type = "text/css" href="css/learing_css.css">
+
     <style>
         /* CSS的注释方式 */
         /*id选择器 */
@@ -25,7 +27,7 @@
         }
 
         /* 元素.类 - 选择器 */
-        #box.box {
+        box.box {
             width: 200px;
             height: 200px;
             background-color: #ccc;
@@ -70,17 +72,86 @@
         #title {
             text-align: center;
         }
+
         #subtitle {
             text-align: right;
             margin-right: 30px;
         }
+
         #poetry {
             /* text-align: justify; */
             /*px.em.rem.%的区别*/
             text-indent: 2rem;
             letter-spacing: 3px;
+            /*字间距*/
+            line-height: 200%;
+            /*行间距*/
+            text-shadow: 2px 2px #ff0000;
+            /*阴影text-shadow: x, y, color*/
+            font-size: 2em;
+            /*1em默认为当前浏览器的字体大小，如16px = 1em，则2em = 32px*/
+        }
+
+        img.top {
+            vertical-align: text-top;
+            /* Keyword values 
+                vertical-align: baseline;
+                vertical-align: sub;
+                vertical-align: super;
+                vertical-align: text-top;
+                vertical-align: text-bottom;
+                vertical-align: middle;
+                vertical-align: top;
+                vertical-align: bottom;
+
+                <length> values
+                vertical-align: 10em;
+                vertical-align: 4px;
+
+                <percentage> values
+                vertical-align: 20%;
+
+                Global values
+                vertical-align: inherit;
+                vertical-align: initial;
+                vertical-align: unset;*/
+        }
+        img.bottom {
+            vertical-align: text-bottom;
 
         }
+
+        a:link {
+            color: #000000;  /*未访问链接*/
+            text-decoration: none;
+        }
+        a:visited {
+            color: #00FF00;  /*已访问链接*/
+            text-decoration: none;
+        }
+        a:hover {
+            color: #FF00FF;  /*鼠标悬浮时链接*/
+            text-decoration: underline;
+        }
+        a:active {
+            color: #0000ff;  /*鼠标点击时链接*/
+            text-decoration: underline;
+        }
+        /*分组选择器 & 嵌套选择器*/
+        a.cube:link,a.cube:visited {
+            display:block;
+            font-weight:bold;
+            color:#FFFFFF;
+            background-color:#98bf21;
+            width:200px;
+            text-align:center;
+            padding:1px;
+            text-decoration:none;
+        }
+        a.cube:hover,a.cube:active {
+            background-color: #7a991a;
+        }
+
         
     </style>
 </head>
@@ -91,37 +162,51 @@
             （内联样式）Inline style > （内部样式）Internal style sheet >（外部样式）External style sheet > 浏览器默认样式<br />
             注意：如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。
         </p>
-        <p id="title">将进酒·君不见 </p>
-        <p id = "subtitle"> 【作者】李白 【朝代】唐译文对照 </p>
-        <p id = "poetry">
-            君不见，黄河之水天上来，奔流到海不复回。
+        <div>
+            <p id="title">将进酒·君不见 </p>
+            <p id="subtitle"> 【作者】李白 【朝代】唐译文对照 </p>
+            <p id="poetry">
+                君不见，黄河之水天上来，奔流到海不复回。
+                君不见，高堂明镜悲白发，朝如青丝暮成雪。
+                人生得意须尽欢，莫使金樽空对月。
+                天生我材必有用，千金散尽还复来。
+                烹羊宰牛且为乐，会须一饮三百杯。
+                岑夫子，丹丘生，将进酒，杯莫停。
+                与君歌一曲，请君为我倾耳听。
+                钟鼓馔玉不足贵，但愿长醉不愿醒。
+                古来圣贤皆寂寞，惟有饮者留其名。
+                陈王昔时宴平乐，斗酒十千恣欢谑。
+                主人何为言少钱，径须沽取对君酌。
+                五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
+        </div>
+        <p>一个<img src="./img/logo.png" ; alt="rainrelaxme"; height="50" ; />默认对齐的图像。</p>
+        <p>一个<img class="top" ; src="./img/logo.png" ; alt="rainrelaxme" ; height="50" ; />text-top对齐的图像。</p>
+        <p>一个<img class="bottom" ; src="./img/logo.png" ; alt="rainrelaxme" ; height="50" ; />text-bottom对齐的图像。</p>
 
-            君不见，高堂明镜悲白发，朝如青丝暮成雪。
-
-            人生得意须尽欢，莫使金樽空对月。
-
-            天生我材必有用，千金散尽还复来。
-
-            烹羊宰牛且为乐，会须一饮三百杯。
-
-            岑夫子，丹丘生，将进酒，杯莫停。
-
-            与君歌一曲，请君为我倾耳听。
-
-            钟鼓馔玉不足贵，但愿长醉不愿醒。
-
-            古来圣贤皆寂寞，惟有饮者留其名。
-
-            陈王昔时宴平乐，斗酒十千恣欢谑。
-
-            主人何为言少钱，径须沽取对君酌。
-
-            五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。
-        </p>
-
-        </p>
+        <div name = link>
+            <p id="title"><a href = "https://hanyu.baidu.com/shici/detail?pid=a86416758a0856a7c93ca9e4654b595e&from=kg0"; target="_blank">悯农</a></p>
+            <p id="subtitle"> 【作者】李绅 【朝代】唐 </p>
+            <p><b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。</p>
+            <p><b>注意：</b> a:active 必须在 a:hover 之后。</p>
+            <a class = "cube"; href="https://hanyu.baidu.com/shici/detail?pid=a86416758a0856a7c93ca9e4654b595e&from=kg0"; target="_blank">方块式的链接点击模块</a></p>
+        </div>
     </div>
 
+    <div>
+        <h3><a href = "https://www.runoob.com/css/css-boxmodel.html">CSS box模型</a></h3>
+        <br/>
+        <img src = "./img/box-model.gif"; alt = "box模型"; />
+        <p>content:内容</p>
+        <p>padding:填充</p>
+        <p>border:边框</p>
+        <p>outline:轮廓</p>
+        <p>margin:外边距</p>
+    </div>
+
+    <div>
+        <img class = "hello1"; src = "./img/potato.jpg"; width = "100"; height="100"; />
+        <h2 id = "hello2";>这是一个隐藏的标题</h2>
+    </div>
 
 </body>
 

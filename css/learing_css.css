@@ -1,0 +1,10 @@
+.hello1 {
+    /* height: 2000;  */
+    visibility: hidden; /*不可视，占据位置*/
+    /* display: none;  不显示，不占据位置 */
+}
+#hello2 {
+    /* height: 2000;  */
+    /* visibility: hidden; 不可视，占据位置 */
+    display: none;  /*不显示，不占据位置 */
+}
