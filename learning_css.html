@@ -45,7 +45,8 @@
             background-color: #ccc;
             background-image: url(./img/wallhaven-v95lq3.jpg);
             background-size: cover;
-            ;
+            overflow: auto;
+            margin-left: 10px;
             /* background-image: url("http://static.runoob.com/images/mix/paper.gif"); */
 
             /*案例2*/
@@ -193,7 +194,7 @@
     </div>
 
     <div>
-        <h3><a href = "https://www.runoob.com/css/css-boxmodel.html">CSS box模型</a></h3>
+        <h3 class = "pos_sticky"><a href = "https://www.runoob.com/css/css-boxmodel.html">CSS box模型</a></h3>
         <br/>
         <img src = "./img/box-model.gif"; alt = "box模型"; />
         <p>content:内容</p>
@@ -203,10 +204,50 @@
         <p>margin:外边距</p>
     </div>
 
-    <div>
+    <div id = "display_test">
         <img class = "hello1"; src = "./img/potato.jpg"; width = "100"; height="100"; />
         <h2 id = "hello2";>这是一个隐藏的标题</h2>
     </div>
+
+    <h2>next about position</h2>
+    <div id = "pos_test">
+        <p>Some text</p>
+        <p class = "pos_re_left">Some text(it cause the bottom slider to apper.</p>
+        <p class = "pos_re_right">Some text</p>
+        <p class = "pos_ab">Some text</p>
+        <p class = "pos_fixed";>Some text which is fixed.</p>
+        <p>Some text</p>
+    </div>
+
+    <h2>next about z-index</h2>
+    <div>
+        <img class = "z_index"; src = "img/potato.jpg"; alt = "potato"; width="200"; />
+    </div>
+
+    <h2>next about overflow</h2>
+    <p><a href = "https://www.runoob.com/css/css-overflow.html">overflow:scroll/hidden/auto/visible/inherit</a></p>
+
+    <h2>next about mouse cursor's shape</h2>
+    <p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
+    <span style="cursor:auto">auto</span><br>
+    <span style="cursor:crosshair">crosshair</span><br>
+    <span style="cursor:default">default</span><br>
+    <span style="cursor:e-resize">e-resize</span><br>
+    <span style="cursor:help">help</span><br>
+    <span style="cursor:move">move</span><br>
+    <span style="cursor:n-resize">n-resize</span><br>
+    <span style="cursor:ne-resize">ne-resize</span><br>
+    <span style="cursor:nw-resize">nw-resize</span><br>
+    <span style="cursor:pointer">pointer</span><br>
+    <span style="cursor:progress">progress</span><br>
+    <span style="cursor:s-resize">s-resize</span><br>
+    <span style="cursor:se-resize">se-resize</span><br>
+    <span style="cursor:sw-resize">sw-resize</span><br>
+    <span style="cursor:text">text</span><br>
+    <span style="cursor:w-resize">w-resize</span><br>
+    <span style="cursor:wait">wait</span><br>
+
+
 
 </body>
 

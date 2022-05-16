@@ -1,3 +1,11 @@
+/*CSS*/
+
+#display_test {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #FF0000;
+}
+
 .hello1 {
     /* height: 2000;  */
     visibility: hidden; /*不可视，占据位置*/
@@ -7,4 +15,45 @@
     /* height: 2000;  */
     /* visibility: hidden; 不可视，占据位置 */
     display: none;  /*不显示，不占据位置 */
+}
+
+#pos_test {
+    position: static;
+}
+
+p.pos_re_left {
+    /*relative 是相对原位置，即static*/
+    position: relative;
+    left: 100px;
+}
+
+p.pos_re_right{
+    position: relative;
+    right: 20px;
+}
+
+p.pos_ab {
+    position: absolute;
+    left: 100px;
+    
+}
+
+p.pos_fixed {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+.pos_sticky {
+    position: sticky;
+    top: 0;
+    background-color: bisque;
+}
+
+.z_index {
+    position: absolute;
+    z-index: -1;    /*z轴，决定显示层级，默认为0，越小越在底部*/
+    top: 0;
+    clip: rect(0, 100px, auto, 0);  /*clip显示*/
+    
 }
