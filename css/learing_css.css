@@ -57,3 +57,158 @@ p.pos_fixed {
     clip: rect(0, 100px, auto, 0);  /*clip显示*/
     
 }
+img.thumbnail {
+    float: left;
+    width: 200px;
+    margin: 5px;
+}
+
+div.center {
+    clear:both;
+    margin: auto;
+    width: 60%;
+    border: 3px solid #FF0000;
+    padding: 10px;
+}
+
+div.center2 {
+    text-align: center;
+    border: 3px solid #FF0000;
+}
+
+img.center3 {
+    margin: auto;
+    border: 3px solid #FF0000;
+    display: block;
+}
+
+div.center4 {
+    padding: 70px 0;
+    text-align: center;
+    border: 3px solid green;
+}
+
+div.center5 {
+    line-height: 200px; /*文本的底线高度*/
+    height: 200px;  /*元素块的高度*/
+    text-align: center;
+    border: 3px solid green;
+}
+
+div.center6 {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+}
+
+div.center6 p {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    /*具体查看2D翻转https://www.runoob.com/css3/css3-2dtransforms.html*/
+    /*这可以使不是开头位置居中，而是全部居中*/
+    transform: translate(-50%, -50%);
+    /* -ms-transform: translate(-50%, -50%); */
+    
+}
+
+div.center7 {
+    border: 3px solid green;
+    height: 200px;
+    vertical-align: middle;
+}
+.center8 {
+    text-align: center;
+}
+
+.tabtop13 {
+    margin-top: 13px;
+}
+
+table td {
+    background-color: #ffffff;
+    height: 35px;
+    line-height: 150%;
+}
+
+.btbg {
+    background-color: #e9faff;
+}
+
+.font-center {
+    text-align: center;
+}
+.font-right {
+    text-align: left;
+    padding-left: 20px;
+
+}
+
+.titfont {
+    font-family: 微软雅黑;
+    font-size: 16px;
+    font-weight: bold;
+    color: #255e95;
+    background-color: #e9faff;
+}
+
+table a:link {
+    color: #000000;
+    
+}
+
+table a:visited {
+    color: rgba(241, 148, 148, 0.3) !important;
+    
+}
+
+table a:hover {
+    color: #3538e6 !important;
+    text-decoration: underline;
+}
+
+#weiyuansu:first-line {
+    color: blue;
+    font-variant: small-caps;
+}
+
+#weiyuansu:first-letter {
+    color:#FF0000;
+    font-size: xx-large;
+}
+
+#weiyuansu:after {
+    content: url("../img/smile.jpg");
+    width: 100px;
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    z-index: -1;
+}
+
+li a {
+    display: block;
+    color: #000000;
+    padding: 8px 16px;
+    text-decoration: none !important;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*选择利用伪类：not*/
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
