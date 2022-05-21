@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
-<style>
-img {
-    display: block;
-    margin: 0 auto;
-}
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        ul.navlist {
+            position: relative;
+        }
 
-body {
-    height: 100%;
-    background-color: aqua;
-}
-</style>
+        ul.navlist li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+            height: 44px;
+            display: block;
+        }
+
+        ul.navlist a {
+            height: 44px;
+            display: block;
+        }
+
+        #home {
+            left: 0;
+            width: 46px;
+            background: url("./img/home.png");
+            border: 1px solid black;
+        }
+
+        #prve {
+            left: 63px;
+            width: 43px;
+            background: url("/learning/img/left.png");
+        }
+
+        #next {
+            left: 129px;
+            width: 43px;
+            background: url("/learning/img/right.png");
+        }
+    </style>
 </head>
+
 <body>
-
-<h2>图片居中对齐</h2>
-<p>要让图片居中对齐, 可以使用 margin: auto; 并将它放到块元素中：</p>
-
-<img src="//static.runoob.com/images/mix/paris.jpg" alt="Paris" style="width:40%">
-
+    <h2>next about navigation by icon</h2>
+    <div>
+        <ul class="navlist">
+            <li id="home"><a href="./main.html"></a></li>
+            <li id="prve"><a href="./high.html"></a></li>
+            <li id="next"><a href="./low.html"></a></li>
+        </ul>
+    </div>
+    
 </body>
+
 </html>
