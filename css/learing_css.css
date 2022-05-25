@@ -182,11 +182,15 @@ table a:hover {
     width: 100px;
 }
 
+#menu {
+    width: 15%;
+}
+
 ul.menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 25%;
+    width: 15%;
     background-color: #f1f1f1;
     height: 100%;
     position: fixed;
@@ -211,4 +215,102 @@ li a.active {
 li a:hover:not(.active) {
     background-color: #555;
     color: white;
+}
+
+/*照片廊*/
+.responsive {
+    float: left;
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 180px;
+    
+}
+
+div.imgGallery:hover {
+    border: 1px solid #777;
+}
+
+div.imgGallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    text-align: center;
+    /* margin-top: 20px ;
+    margin-bottom: 20px; */
+    font-size: small;
+    padding: 15px;
+    cursor: text;
+}
+
+/*opacity*/
+img.imgopac {
+    opacity: 0.4;
+}
+
+img.imgopac:hover {
+    opacity: 1.0;
+}
+
+div.background {
+    width: 500px;
+    height: auto;
+    border: 2px solid black;
+
+    /*使用content会使其无法看到背后的内容，需要用background*/
+    /* content: url(../img/forever\ memory.jpeg); */
+    background: url("../img/forever\ memory.jpeg");
+}
+
+div.transbox {
+    
+    width: 400px;
+    height: 300px;
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+div.transbox p {
+    margin: 30px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/*navlist*/
+ul.navlist {
+    position: relative;
+}
+
+ul.navlist li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    height: 44px;
+    display: block;
+}
+
+ul.navlist a {
+    height: 44px;
+    display: block;
+}
+
+#home {
+    left: 0;
+    width: 46px;
+    background: url("/learning/img/left.png");
+}
+#left {
+    left: 63px;
+    width: 43px;
+    background: url("/learning/img/left.png");
+}
+#right {
+    left: 129px;
+    width: 43px;
+    background: url("/learning/img/right.png");
 }

@@ -58,9 +58,9 @@
         }
 
         #main {
-            margin-left: 25%;
+            margin-left: 15%;
             border: 3px  solid #ff0000;
-            width: 35%;
+            
             background-color: rgb(189, 189, 189, 0.5);
             z-index: 2;
         }
@@ -71,6 +71,10 @@
             background-image: url("http://static.runoob.com/images/mix/gradient2.png");
             background-repeat: repeat-x;
             /*重复方式*/
+        }
+
+        h2 {
+            clear: both;
         }
 
         #title {
@@ -366,19 +370,83 @@
                 与伪类针对特殊状态的元素不同的是，伪元素是对元素中的特定内容进行操作，它所操作的层次比伪类更深了一层，也因此它的动态性比伪类要低得多。实际上，设计伪元素的目的就是去选取诸如元素内容第一个字（母）、第一行，选取某些内容前面或后面这种普通的选择器无法完成的工作。它控制的内容实际上和元素是相同的，但是它本身只是基于元素的抽象，并不存在于文档中，所以叫伪元素。
             </p>
         </div>
+
+
     </div>
+
+    <h2>next about CSS img Gallery</h2>
+    <div>
+        <div class = "responsive">
+            <div class = "imgGallery">
+                <a target="_blank" href = "img/1.jpg">
+                    <img src = "img/1.jpg" alt = "hello" width="200" height="200" />
+                </a>
+                <div class="desc">这里添加图片文本描述</div>
+            </div>
+        </div>
+
+        <div class = "responsive">
+            <div class = "imgGallery">
+                <a target="_blank" href = "img/2.jpg">
+                    <img src = "img/2.jpg" alt = "hello" width="200" height="200" />
+                </a>
+                <div class="desc">这里添加图片文本描述</div>
+            </div>
+        </div>
+
+        <div class = "responsive">
+            <div class = "imgGallery">
+                <a target="_blank" href = "img/3.jpg">
+                    <img src = "img/3.jpg" alt = "hello" width="200" height="200" />
+                </a>
+                <div class="desc">这里添加图片文本描述</div>
+            </div>
+        </div>
+
+        <div class = "responsive">
+            <div class = "imgGallery">
+                <a target="_blank" href = "img/4.jpg">
+                    <img src = "img/4.jpg" alt = "hello" width="200" height="200" />
+                </a>
+                <div class="desc">这里添加图片文本描述</div>
+            </div>
+        </div>
+
+    </div>
+
+    <h2>next about pic opacity</h2>
+    <div>
+        <p>opacity 属性通常与 :hover 选择器一起使用，在鼠标移动到图片上后改变图片的透明度：</p>
+        <img class = "imgopac" src = "img/potato.jpg" width="200" alt = "opacity pic" />
+    </div>
+    <div class = "background">
+        <div class = "transbox">
+            <p>这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。</p>
+        </div>
+    </div>
+
+    
 </div>
 
-<div id = "menu"></div>
-    <h2>next about menu</h2>
+<div id = "menu">
+    <h2>next about navigation by icon</h2>
+    <div>
+        <ul class = "navlist">
+            <li id = "home"><a href="./main.html"></a></li>
+            <li id = "prve"><a href="./high.html"></a></li>
+            <li id = "next"><a href="./low.html"></a></li>
+        </ul>
+    </div>
     <div>
         <ul class = "menu">
+            <h2>next about menu</h2>
             <li><a class = "active"; href = "#home">主页</a></li>
             <li><a href = "#news">新闻</a></li>
             <li><a href = "#contact">联系</a></li>
             <li><a href = "#about">关于</a></li>
         </ul>
     </div>
+</div>
 
 <div id = "fotter"></div>
    

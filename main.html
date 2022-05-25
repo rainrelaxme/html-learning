@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta author = "rainrelaxme" content="rainrelaxme learning history main">
-        <title>
-            Menu - rainrelaxme
-        </title>
-        <link rel = "icon" href = "./img/potato.jpg" type="image/x-icon">
-        <link rel = "stylesheet" href = "./css/main.css">
-    </head>
-    <body>
-        <div id = "header"; name = "header"; >
-            <h2 class = "textCenter"><it>rainrelaxme's learning history</it></h2>
-            <div class = "search">
-                <img src = "./img/search.png"; alt = "search" class = "searchImg" />
-            </div>
 
-            <!--<h1 style="font-size:large; color: brown;">MENU</h1>
+<head>
+    <meta charset="utf-8">
+    <meta author="rainrelaxme" content="rainrelaxme learning history main">
+    <title>
+        Menu - rainrelaxme
+    </title>
+    <link rel="icon" href="./img/potato.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!--头部-->
+    <div id="header" ; name="header" ;>
+        <h2 class="textCenter">
+            <it>rainrelaxme's learning history</it>
+        </h2>
+        <div class="search">
+            <img src="./img/search.png" ; alt="search" class="searchImg" />
+        </div>
+        <!--<h1 style="font-size:large; color: brown;">MENU</h1>
             <br/>
             <br/>
             <div>
@@ -57,18 +61,28 @@
                     </dt>
                 </dl>   
             </div>-->
-        </div>
+    </div>
 
-        <div id = "menu"; name = "menu">
-            <ul class = "menu">
-                <li><a href ="./example.html">chapter1 Example</a></li>
-                <li><a href ="./example.html">chapter2 Learning HTML</a></li>
-                <li><a href ="./example.html">chapter3 Learning HTML5</a></li>
-                <li><a href ="./example.html">chapter4 Learning CSS</a></li>
-                <li><a href ="./example.html">Attachment</a></li>
+    <div id = "main" name = "main">
+        <!--左侧菜单-->
+        <div id="menu" ; name="menu">
+            <ul class="menu">
+                <li><a href="./example.html" target="iframe_content">chapter1 Example</a></li>
+                <li><a href="./example.html">chapter2 Learning HTML</a></li>
+                <li><a href="./example.html">chapter3 Learning HTML5</a></li>
+                <li><a href="./example.html">chapter4 Learning CSS</a></li>
+                <li><a href="./example.html">Attachment</a></li>
             </ul>
         </div>
-        <div id = "content"; name = "content"></div>
-        <div id = "footer"; name = "footer"></div>
-    </body>
-    
+
+        <!--右侧正文-->
+        <div id="content" ; name="content">
+            <iframe id="iframeContent" ; name="iframe_content"></iframe>
+        </div>
+
+        <!--底部-->
+        <div id="footer" ; name="footer"></div>
+    </div>
+</body>
+
+</html>
