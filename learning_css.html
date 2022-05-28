@@ -46,7 +46,7 @@
             background-image: url(./img/wallhaven-v95lq3.jpg);
             background-size: cover;
             overflow: auto;
-            
+
             /* background-image: url("http://static.runoob.com/images/mix/paper.gif"); */
 
             /*案例2*/
@@ -59,8 +59,8 @@
 
         #main {
             margin-left: 15%;
-            border: 3px  solid #ff0000;
-            
+            border: 3px solid #ff0000;
+
             background-color: rgb(189, 189, 189, 0.5);
             z-index: 2;
         }
@@ -174,7 +174,7 @@
 </head>
 
 <body>
-    <div id = "header"></div>
+    <div id="header"></div>
     <div id=main>
         <p id="p1">一般情况下，优先级如下：<br />
             （内联样式）Inline style > （内部样式）Internal style sheet >（外部样式）External style sheet > 浏览器默认样式<br />
@@ -210,246 +210,257 @@
             <a class="cube" ; href="https://hanyu.baidu.com/shici/detail?pid=a86416758a0856a7c93ca9e4654b595e&from=kg0"
                 ; target="_blank">方块式的链接点击模块</a></p>
         </div>
-    
 
-    <div>
-        <h3 class="pos_sticky"><a href="https://www.runoob.com/css/css-boxmodel.html">CSS box模型</a></h3>
-        <br />
-        <img src="./img/box-model.gif" ; alt="box模型" ; />
-        <p>content:内容</p>
-        <p>padding:填充</p>
-        <p>border:边框</p>
-        <p>outline:轮廓</p>
-        <p>margin:外边距</p>
-    </div>
-
-    <div id="display_test">
-        <img class="hello1" ; src="./img/potato.jpg" ; width="100" ; height="100" ; />
-        <h2 id="hello2" ;>这是一个隐藏的标题</h2>
-    </div>
-
-    <h2>next about position</h2>
-    <div id="pos_test">
-        <p>Some text</p>
-        <p class="pos_re_left">Some text(it cause the bottom slider to apper.</p>
-        <p class="pos_re_right">Some text</p>
-        <p class="pos_ab">Some text</p>
-        <p class="pos_fixed" ;>Some text which is fixed.</p>
-        <p>Some text</p>
-    </div>
-
-    <h2>next about z-index</h2>
-    <div>
-        <img class="z_index" ; src="img/potato.jpg" ; alt="potato" ; width="200" ; />
-    </div>
-
-    <h2>next about overflow</h2>
-    <p><a href="https://www.runoob.com/css/css-overflow.html">overflow:scroll/hidden/auto/visible/inherit</a></p>
-
-    <h2>next about mouse cursor's shape</h2>
-    <p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
-    <span style="cursor:auto">auto</span><br>
-    <span style="cursor:crosshair">crosshair</span><br>
-    <span style="cursor:default">default</span><br>
-    <span style="cursor:e-resize">e-resize</span><br>
-    <span style="cursor:help">help</span><br>
-    <span style="cursor:move">move</span><br>
-    <span style="cursor:n-resize">n-resize</span><br>
-    <span style="cursor:ne-resize">ne-resize</span><br>
-    <span style="cursor:nw-resize">nw-resize</span><br>
-    <span style="cursor:pointer">pointer</span><br>
-    <span style="cursor:progress">progress</span><br>
-    <span style="cursor:s-resize">s-resize</span><br>
-    <span style="cursor:se-resize">se-resize</span><br>
-    <span style="cursor:sw-resize">sw-resize</span><br>
-    <span style="cursor:text">text</span><br>
-    <span style="cursor:w-resize">w-resize</span><br>
-    <span style="cursor:wait">wait</span><br>
-
-    <h2>next about folat</h2>
-    <div>
-        <h3>Image Gallery</h3>
-        <p>try to adjust the window and figure out the result while it is not enough to fix the images.</p>
-        <img class="thumbnail" src="img/1.jpg" ; width="100" ; alt="headshot" />
-        <img class="thumbnail" src="img/2.jpg" ; width="100" ; alt="headshot" />
-        <img class="thumbnail" src="img/3.jpg" ; width="100" ; alt="headshot" />
-        <img class="thumbnail" src="img/4.jpg" ; width="100" ; alt="headshot" />
-        <img class="thumbnail" src="img/5.jpg" ; width="100" ; alt="headshot" />
-    </div>
-
-
-    <h2>next about align</h2>
-    <div>
-        <h3>元素对齐</h3>
-        <div class="center">
-            <p><b>Attention:</b>mrgin:auto won't take affect until you use !DOCTYPE.</p>
-        </div>
-        <h3>文本对齐</h3>
-        <div class="center2">
-            <p>文本居中对齐使用text-align</p>
-        </div>
-        <h3>图片对齐</h3>
-        <div>
-            <p>要让图片居中对齐, 可以使用 margin: auto; 并将它放到块元素中：</p>
-            <img class="center3" src="img/potato.jpg" ; alt="potato" ; width="200" />
-        </div>
-        <h3>左右对齐</h3>>
-        <p>可以使用 <b>position: absolute;</b> 属性来对齐元素</p>
-        <div>
-            <p> 可以使用 <b>float</b> 属性来对齐元素</p>
-            <p>注意：如果子元素的高度大于父元素，且子元素设置了浮动，那么子元素将溢出，这时候你可以使用 "clearfix(清除浮动)" 来解决该问题。</p>
-            <p>我们可以在父元素上添加 overflow: auto; 来解决子元素溢出的问题</p>
-        </div>
-        <h3>垂直对齐</h3>
-        <div class="center4">
-            <p>我是垂直居中,使用padding;</p>
-        </div><br />
-        <div class="center5">
-            <p>我是另一种垂直居中,使用line-height</p>
-        </div><br />
-        <div class="center6">
-            <p>我是另一种垂直居中，使用position和transform</p>
-        </div><br />
-        <div class="center7">
-            <p>我是另一种垂直居中，使用vertical</p>
-        </div>
-    </div>
-
-    <h2>next about CSS combined selection</h2>
-    <div>
-        <p>在 CSS3 中包含了四种组合方式:<br /></p>
-        <ul>
-            <li>后代选择器(以空格 分隔)</li>
-            <dd>后代选择器用于选取某元素的后代元素,如"div &nbsp; p"</dd>
-            <li>子元素选择器(以大于 > 号分隔）</li>
-            <dd>与后代选择器相比，子元素选择器（Child selectors）只能选择作为某元素直接/一级子元素的元素,如"div>p"</dd>
-            <li>相邻兄弟选择器（以加号 + 分隔）</li>
-            <dd>相邻兄弟选择器（Adjacent sibling selector）可选择<b>紧接</b>在另一元素后的元素，且二者有相同父元素，如"div+p"</dd>
-            <li>普通兄弟选择器（以波浪号 ～ 分隔）</li>
-            <dd>后续兄弟选择器选取所有指定元素之后的相邻兄弟元素,如"div~p"</dd>
-        </ul>
-        <div>
-            <a class="center8" ; href="https://www.runoob.com/css/css-pseudo-classes.html" ;>伪类</a>
-            <table class="tabtop13 font-center" ; cellspacing="2" ; cellpadding="4" ; bgcolor="#cccccc" ; align="auto" ;
-                width="60%" ;>
-                <thead>
-                    <td class="btbg font-center titfont" ; width="200px">选择器</td>
-                    <td class="btbg font-center titfont" ; width="200px">示例</td>
-                    <td class="btbg font-center titfont">示例说明</td>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a class="link" ; href="https://www.runoob.com/cssref/sel-checked.html"; target="_blank"
-                                ；>.checked</a></td>
-                        <td>input:checked</td>
-                        <td class="font-right">选择所有选中的表单元素</td>
-                    </tr>
-                    <tr>
-                        <td><a class="link" ; href="https://www.runoob.com/cssref/sel-disabled.html"; target="_blank"
-                                ；>:disabled</a></td>
-                        <td>input:disabled</td>
-                        <td class="font-right">选择所有禁用的表单元素</td>
-                    </tr>
-                    <tr>
-                        <td><a class="link" ; href="https://www.runoob.com/cssref/sel-not.html"; target="_blank"
-                                ；>:not(selector)</a></td>
-                        <td>:not(p)</td>
-                        <td class="font-right">选择所有p以外的元素,上面也可以使用.selector等class名</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" ;><a class="link" ; href="https://www.runoob.com/css/css-pseudo-classes.html" ;
-                                target="_blank" ；>查看更多...</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
         <div>
-            <p id="weiyuansu">
-                伪类选择元素基于的是当前元素处于的状态，或者 说元素当前所具有的特性，而不是元素的id、class、属性等静态的标志。由于状态是动态变化的，所以一个元素达到一个特定状态时，它可能得到一个伪类的样式；当状态改变时，它又会失去这个样式。由此可以看出，它的功能和class有些类似，但它是基于文档之外的抽象，所以叫伪类。<br />
-                与伪类针对特殊状态的元素不同的是，伪元素是对元素中的特定内容进行操作，它所操作的层次比伪类更深了一层，也因此它的动态性比伪类要低得多。实际上，设计伪元素的目的就是去选取诸如元素内容第一个字（母）、第一行，选取某些内容前面或后面这种普通的选择器无法完成的工作。它控制的内容实际上和元素是相同的，但是它本身只是基于元素的抽象，并不存在于文档中，所以叫伪元素。
-            </p>
+            <h3 class="pos_sticky"><a href="https://www.runoob.com/css/css-boxmodel.html">CSS box模型</a></h3>
+            <br />
+            <img src="./img/box-model.gif" ; alt="box模型" ; />
+            <p>content:内容</p>
+            <p>padding:填充</p>
+            <p>border:边框</p>
+            <p>outline:轮廓</p>
+            <p>margin:外边距</p>
+        </div>
+
+        <div id="display_test">
+            <img class="hello1" ; src="./img/potato.jpg" ; width="100" ; height="100" ; />
+            <h2 id="hello2" ;>这是一个隐藏的标题</h2>
+        </div>
+
+        <h2>next about position</h2>
+        <div id="pos_test">
+            <p>Some text</p>
+            <p class="pos_re_left">Some text(it cause the bottom slider to apper.</p>
+            <p class="pos_re_right">Some text</p>
+            <p class="pos_ab">Some text</p>
+            <p class="pos_fixed" ;>Some text which is fixed.</p>
+            <p>Some text</p>
+        </div>
+
+        <h2>next about z-index</h2>
+        <div>
+            <img class="z_index" ; src="img/potato.jpg" ; alt="potato" ; width="200" ; />
+        </div>
+
+        <h2>next about overflow</h2>
+        <p><a href="https://www.runoob.com/css/css-overflow.html">overflow:scroll/hidden/auto/visible/inherit</a></p>
+
+        <h2>next about mouse cursor's shape</h2>
+        <p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
+        <span style="cursor:auto">auto</span><br>
+        <span style="cursor:crosshair">crosshair</span><br>
+        <span style="cursor:default">default</span><br>
+        <span style="cursor:e-resize">e-resize</span><br>
+        <span style="cursor:help">help</span><br>
+        <span style="cursor:move">move</span><br>
+        <span style="cursor:n-resize">n-resize</span><br>
+        <span style="cursor:ne-resize">ne-resize</span><br>
+        <span style="cursor:nw-resize">nw-resize</span><br>
+        <span style="cursor:pointer">pointer</span><br>
+        <span style="cursor:progress">progress</span><br>
+        <span style="cursor:s-resize">s-resize</span><br>
+        <span style="cursor:se-resize">se-resize</span><br>
+        <span style="cursor:sw-resize">sw-resize</span><br>
+        <span style="cursor:text">text</span><br>
+        <span style="cursor:w-resize">w-resize</span><br>
+        <span style="cursor:wait">wait</span><br>
+
+        <h2>next about folat</h2>
+        <div>
+            <h3>Image Gallery</h3>
+            <p>try to adjust the window and figure out the result while it is not enough to fix the images.</p>
+            <img class="thumbnail" src="img/1.jpg" ; width="100" ; alt="headshot" />
+            <img class="thumbnail" src="img/2.jpg" ; width="100" ; alt="headshot" />
+            <img class="thumbnail" src="img/3.jpg" ; width="100" ; alt="headshot" />
+            <img class="thumbnail" src="img/4.jpg" ; width="100" ; alt="headshot" />
+            <img class="thumbnail" src="img/5.jpg" ; width="100" ; alt="headshot" />
         </div>
 
 
-    </div>
-
-    <h2>next about CSS img Gallery</h2>
-    <div>
-        <div class = "responsive">
-            <div class = "imgGallery">
-                <a target="_blank" href = "img/1.jpg">
-                    <img src = "img/1.jpg" alt = "hello" width="200" height="200" />
-                </a>
-                <div class="desc">这里添加图片文本描述</div>
+        <h2>next about align</h2>
+        <div>
+            <h3>元素对齐</h3>
+            <div class="center">
+                <p><b>Attention:</b>mrgin:auto won't take affect until you use !DOCTYPE.</p>
+            </div>
+            <h3>文本对齐</h3>
+            <div class="center2">
+                <p>文本居中对齐使用text-align</p>
+            </div>
+            <h3>图片对齐</h3>
+            <div>
+                <p>要让图片居中对齐, 可以使用 margin: auto; 并将它放到块元素中：</p>
+                <img class="center3" src="img/potato.jpg" ; alt="potato" ; width="200" />
+            </div>
+            <h3>左右对齐</h3>>
+            <p>可以使用 <b>position: absolute;</b> 属性来对齐元素</p>
+            <div>
+                <p> 可以使用 <b>float</b> 属性来对齐元素</p>
+                <p>注意：如果子元素的高度大于父元素，且子元素设置了浮动，那么子元素将溢出，这时候你可以使用 "clearfix(清除浮动)" 来解决该问题。</p>
+                <p>我们可以在父元素上添加 overflow: auto; 来解决子元素溢出的问题</p>
+            </div>
+            <h3>垂直对齐</h3>
+            <div class="center4">
+                <p>我是垂直居中,使用padding;</p>
+            </div><br />
+            <div class="center5">
+                <p>我是另一种垂直居中,使用line-height</p>
+            </div><br />
+            <div class="center6">
+                <p>我是另一种垂直居中，使用position和transform</p>
+            </div><br />
+            <div class="center7">
+                <p>我是另一种垂直居中，使用vertical</p>
             </div>
         </div>
 
-        <div class = "responsive">
-            <div class = "imgGallery">
-                <a target="_blank" href = "img/2.jpg">
-                    <img src = "img/2.jpg" alt = "hello" width="200" height="200" />
-                </a>
-                <div class="desc">这里添加图片文本描述</div>
+        <h2>next about CSS combined selection</h2>
+        <div>
+            <p>在 CSS3 中包含了四种组合方式:<br /></p>
+            <ul>
+                <li>后代选择器(以空格 分隔)</li>
+                <dd>后代选择器用于选取某元素的后代元素,如"div &nbsp; p"</dd>
+                <li>子元素选择器(以大于 > 号分隔）</li>
+                <dd>与后代选择器相比，子元素选择器（Child selectors）只能选择作为某元素直接/一级子元素的元素,如"div>p"</dd>
+                <li>相邻兄弟选择器（以加号 + 分隔）</li>
+                <dd>相邻兄弟选择器（Adjacent sibling selector）可选择<b>紧接</b>在另一元素后的元素，且二者有相同父元素，如"div+p"</dd>
+                <li>普通兄弟选择器（以波浪号 ～ 分隔）</li>
+                <dd>后续兄弟选择器选取所有指定元素之后的相邻兄弟元素,如"div~p"</dd>
+            </ul>
+            <div>
+                <a class="center8" ; href="https://www.runoob.com/css/css-pseudo-classes.html" ;>伪类</a>
+                <table class="tabtop13 font-center" ; cellspacing="2" ; cellpadding="4" ; bgcolor="#cccccc" ;
+                    align="auto" ; width="60%" ;>
+                    <thead>
+                        <td class="btbg font-center titfont" ; width="200px">选择器</td>
+                        <td class="btbg font-center titfont" ; width="200px">示例</td>
+                        <td class="btbg font-center titfont">示例说明</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="link" ; href="https://www.runoob.com/cssref/sel-checked.html" ;
+                                    target="_blank" ；>.checked</a></td>
+                            <td>input:checked</td>
+                            <td class="font-right">选择所有选中的表单元素</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" ; href="https://www.runoob.com/cssref/sel-disabled.html" ;
+                                    target="_blank" ；>:disabled</a></td>
+                            <td>input:disabled</td>
+                            <td class="font-right">选择所有禁用的表单元素</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" ; href="https://www.runoob.com/cssref/sel-not.html" ; target="_blank"
+                                    ；>:not(selector)</a></td>
+                            <td>:not(p)</td>
+                            <td class="font-right">选择所有p以外的元素,上面也可以使用.selector等class名</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" ;><a class="link" ;
+                                    href="https://www.runoob.com/css/css-pseudo-classes.html" ; target="_blank"
+                                    ；>查看更多...</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <p id="weiyuansu">
+                    伪类选择元素基于的是当前元素处于的状态，或者
+                    说元素当前所具有的特性，而不是元素的id、class、属性等静态的标志。由于状态是动态变化的，所以一个元素达到一个特定状态时，它可能得到一个伪类的样式；当状态改变时，它又会失去这个样式。由此可以看出，它的功能和class有些类似，但它是基于文档之外的抽象，所以叫伪类。<br />
+                    与伪类针对特殊状态的元素不同的是，伪元素是对元素中的特定内容进行操作，它所操作的层次比伪类更深了一层，也因此它的动态性比伪类要低得多。实际上，设计伪元素的目的就是去选取诸如元素内容第一个字（母）、第一行，选取某些内容前面或后面这种普通的选择器无法完成的工作。它控制的内容实际上和元素是相同的，但是它本身只是基于元素的抽象，并不存在于文档中，所以叫伪元素。
+                </p>
+            </div>
+
+
+        </div>
+
+        <h2>next about CSS img Gallery</h2>
+        <div>
+            <div class="responsive">
+                <div class="imgGallery">
+                    <a target="_blank" href="img/1.jpg">
+                        <img src="img/1.jpg" alt="hello" width="200" height="200" />
+                    </a>
+                    <div class="desc">这里添加图片文本描述</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="imgGallery">
+                    <a target="_blank" href="img/2.jpg">
+                        <img src="img/2.jpg" alt="hello" width="200" height="200" />
+                    </a>
+                    <div class="desc">这里添加图片文本描述</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="imgGallery">
+                    <a target="_blank" href="img/3.jpg">
+                        <img src="img/3.jpg" alt="hello" width="200" height="200" />
+                    </a>
+                    <div class="desc">这里添加图片文本描述</div>
+                </div>
+            </div>
+
+            <div class="responsive">
+                <div class="imgGallery">
+                    <a target="_blank" href="img/4.jpg">
+                        <img src="img/4.jpg" alt="hello" width="200" height="200" />
+                    </a>
+                    <div class="desc">这里添加图片文本描述</div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2>next about pic opacity</h2>
+        <div>
+            <p>opacity 属性通常与 :hover 选择器一起使用，在鼠标移动到图片上后改变图片的透明度：</p>
+            <img class="imgopac" src="img/potato.jpg" width="200" alt="opacity pic" />
+        </div>
+        <div class="background">
+            <div class="transbox">
+                <p>这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。
+                </p>
             </div>
         </div>
 
-        <div class = "responsive">
-            <div class = "imgGallery">
-                <a target="_blank" href = "img/3.jpg">
-                    <img src = "img/3.jpg" alt = "hello" width="200" height="200" />
-                </a>
-                <div class="desc">这里添加图片文本描述</div>
-            </div>
+        <h2>next about input</h2>
+        <p>搜索输入框带动画:</p>
+
+        <form>
+            <input type="text" name="search" placeholder="搜索..">
+        </form>
+
+        
+
+    </div>
+
+    <div id="menu">
+        <h2>next about navigation by icon</h2>
+        <div>
+            <ul class="navlist">
+                <li id="home"><a href="./main.html"></a></li>
+                <li id="prve"><a href="./high.html"></a></li>
+                <li id="next"><a href="./low.html"></a></li>
+            </ul>
         </div>
-
-        <div class = "responsive">
-            <div class = "imgGallery">
-                <a target="_blank" href = "img/4.jpg">
-                    <img src = "img/4.jpg" alt = "hello" width="200" height="200" />
-                </a>
-                <div class="desc">这里添加图片文本描述</div>
-            </div>
-        </div>
-
-    </div>
-
-    <h2>next about pic opacity</h2>
-    <div>
-        <p>opacity 属性通常与 :hover 选择器一起使用，在鼠标移动到图片上后改变图片的透明度：</p>
-        <img class = "imgopac" src = "img/potato.jpg" width="200" alt = "opacity pic" />
-    </div>
-    <div class = "background">
-        <div class = "transbox">
-            <p>这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。</p>
+        <div>
+            <ul class="menu">
+                <h2>next about menu</h2>
+                <li><a class="active" ; href="#home">主页</a></li>
+                <li><a href="#news">新闻</a></li>
+                <li><a href="#contact">联系</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
         </div>
     </div>
 
-    
-</div>
+    <div id="fotter"></div>
 
-<div id = "menu">
-    <h2>next about navigation by icon</h2>
-    <div>
-        <ul class = "navlist">
-            <li id = "home"><a href="./main.html"></a></li>
-            <li id = "prve"><a href="./high.html"></a></li>
-            <li id = "next"><a href="./low.html"></a></li>
-        </ul>
-    </div>
-    <div>
-        <ul class = "menu">
-            <h2>next about menu</h2>
-            <li><a class = "active"; href = "#home">主页</a></li>
-            <li><a href = "#news">新闻</a></li>
-            <li><a href = "#contact">联系</a></li>
-            <li><a href = "#about">关于</a></li>
-        </ul>
-    </div>
-</div>
-
-<div id = "fotter"></div>
-   
 
 </body>
 

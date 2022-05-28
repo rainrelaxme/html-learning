@@ -56,6 +56,45 @@ body {
     color: #000000;
 }
 
+/*二级菜单*/
+li a, .dropbtn
+  {
+    display:inline-block;
+    padding:14px 16px;
+    text-decoration:none;
+  } 
+    
+  /* .dropdown
+  {
+    display:inline-block;
+  } */
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    right: 0;
+    top: 184;
+    background-color:#f9f9f9;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a
+  {
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+  }
+
 /*alink*/
 a:link, a:visited {
     color: #000000;
