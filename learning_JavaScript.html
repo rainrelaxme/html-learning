@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta author = "rainrelaxme" content="rainrelaxme learning history">
+        <title>JavaScript - rainrelaxme's learning record</title>
+        <link rel = "icon" href="./img/potato.jpg" type="image/x-icon">
+        <link rel = "stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div>
+            <h2>It is about document.write</h2>
+            <p>JavaScript区分<strong>大小写!</strong></p>
+            <script>
+                document.write("<h3>这是一个三级标题</h3>")
+            </script>
+        </div>
+        <div>
+            <h2>next about output</h2>
+            <p>JavaScript 可以通过不同的方式来输出数据：<br/>
+
+                使用 window.alert() 弹出警告框。
+                <button type = "button" onclick = "function1()">window.alert</button><br/>
+                使用 document.write() 方法将内容写到 HTML 文档中。
+                <button type = "button" onclick = "function2()">clickme</button><br/>
+                使用 innerHTML 写入到 HTML 元素。
+                <button id = function3 type = "button" onclick = "function3()">clickme</button><br/>
+                使用 console.log() 写入到浏览器的控制台。</p>
+            <script>
+                function function1() {
+                    window.alert(5+6);
+                }
+                function function2() {
+                    document.write(Date());
+                }
+                function function3() {
+                    document.getElementById("function3").innerHTML = "innerHTML修改"
+                }
+            </script>
+        </div>
+
+        <div>
+            <h2>next about js keyword</h2>
+            <p>
+                break	用于跳出循环。<br/>
+                catch	语句块，在 try 语句块执行出错时执行 catch 语句块。<br/>
+                continue	跳过循环中的一个迭代。<br/>
+                do ... while	执行一个语句块，在条件语句为 true 时继续执行该语句块。<br/>
+                for	在条件语句为 true 时，可以将代码块执行指定的次数。<br/>
+                for ... in	用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。<br/>
+                function	定义一个函数<br/>
+                if ... else	用于基于不同的条件来执行不同的动作。<br/>
+                return	退出函数<br/>
+                switch	用于基于不同的条件来执行不同的动作。<br/>
+                throw	抛出（生成）错误 。<br/>
+                try	实现错误处理，与 catch 一同使用。<br/>
+                var	声明一个变量。<br/>
+                while	当条件语句为 true 时，执行语句块。<br/>
+            </p>
+        </div>
+
+    </body>
+</html>
