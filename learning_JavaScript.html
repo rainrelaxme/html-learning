@@ -60,5 +60,192 @@
             </p>
         </div>
 
+        <div>
+            <h2>点击按钮检测年龄</h2>
+            <p>年龄：</p>
+            <input id = "function4input" value="18" /><br/>
+            <p>是否达到投票年龄？</p>
+            <button type="button" onclick="function4()" >点击按钮</button>
+            <p id = "function4"></p>
+            <script>
+                function function4() {
+                    var age, display;
+                    age = document.getElementById("function4input").value;
+                    display = (age < 18)? "年级太小":"年级已达到";
+                    document.getElementById("function4").innerHTML = display;
+                }
+            </script>
+        </div>
+
+        <div>
+            <h2>undefined 和 null 的区别</h2>
+            <p>
+                （1）undefined：是所有没有赋值变量的默认值，自动赋值。<br/>
+                （2）null：主动释放一个变量引用的对象，表示一个变量不再指向任何对象地址<br/>
+                <strong>何时使用null?</strong><br/>
+                当使用完一个比较大的对象时，需要对其进行释放内存时，设置为 null。
+            </p>
+        </div>
+
+        <div>
+            <h2>判断是否为数组</h2>
+            <p id = "function5" ></p>
+            <script>
+                var fruit = ["Banana", "Apple", "Orange", "Mango"];
+                document.getElementById("function5").innerHTML = function5(fruit);
+                function function5(myArray) {
+                    var result;
+                    result = (myArray.constructor.toString().indexOf("Array") > -1)? "是数组":"不是数组";/*先判断类型，然后将类型结果转成字符串，最后匹配类型中是否有“Array”此结果*/
+                    return myArray + ": " + result;
+                }
+            </script>
+        </div>
+
+        <div>
+            <h2>正则表达式</h2>
+            <div>
+                <p>JS 判断字符串是否全部为数字</p>
+                <script>
+                    val = "123456";
+                    var isnum = /^\d+$/.test(val);/*/^\d+$/ 是正则表达式，^和$都是用来匹配位置，^表示匹配字符开头的字符，$表示匹配字符结尾的字符；\d+匹配多个数字字符串。所以/^\d+$/ 表示匹配一整行中1个以上的数字。*/
+                    /*var isletter = /^[a-zA-Z]+$/.test(val);*//*是否全是字母*/
+                    document.write(isnum);
+                    document.write("<br/>");
+                </script>
+            </div>
+            <div>
+                <form name="myform" action="" onsubmit="return fun1()">
+                    <div align="center">
+                    <table border="1" width="60%" >
+                        <tr>
+                            <td colspan=2 align=center><h3>学生信息管理</h3></td>
+                        </tr>
+                        <tr>
+                            <td height="39" width="463" bgcolor="#006699">
+                            <font color="#FFFF00">学生编号：</font><input type="text" maxlength=10 id="sno" value="12345678">(8位数字)
+                            </td>
+                    
+                            <td height="39" width="463" bgcolor="#006699">
+                            <font color="#FFFF00">学生名字：</font><input type="text" maxlength=10 id="username" value="刘训">(中文)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="39" width="463" bgcolor="#006699">
+                            <font color="#FFFF00">邮箱地址：</font><input type="text" maxlength=10 id="email" value="1056125478@qq.com">
+                            </td>
+                            
+                           <td height="39" width="463" bgcolor="#006699">
+                            <font color="#FFFF00">电话号码：</font><input type="text" maxlength=11 id="tel" value="15574074751">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  height="53" width="985" bgcolor="#006699" colspan="2" align=center>
+                            <input type="submit" value="使用submit按钮提交表单">
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                <script>
+                    /*是否带有小数*/
+                    function    isDecimal(strValue )  {  
+                    var  objRegExp= /^\d+\.\d+$/;
+                    return  objRegExp.test(strValue);  
+                    }  
+
+                    /*校验是否中文名称组成 */
+                    function ischina(str) {
+                        var reg=/^[\u4E00-\u9FA5]{2,4}$/;   /*定义验证表达式*/
+                        return reg.test(str);     /*进行验证*/
+                    }
+
+                    /*校验是否全由8位数字组成 */
+                    function isStudentNo(str) {
+                        var reg=/^[0-9]{8}$/;   /*定义验证表达式*/
+                        return reg.test(str);     /*进行验证*/
+                    }
+
+                    /*校验电话码格式 */
+                    function isTelCode(str) {
+                        var reg= /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+                        return reg.test(str);
+                    }
+
+                    /*校验邮件地址是否合法 */
+                    function IsEmail(str) {
+                        var reg=/^\w+@[a-zA-Z0-9]{2,10}(?:\.[a-z]{2,4}){1,3}$/;
+                        return reg.test(str);
+                    }
+
+
+                    function  fun1(){
+                        if(!isStudentNo(document.getElementById("sno").value)){
+                            alert("学生编号是8位数字");
+                            document.getElementById("sno").focus();
+                            return false;
+                        }
+
+                        if(!ischina(document.getElementById("username").value)){
+                            alert("学生姓名必须填写中文");
+                            document.getElementById("username").focus();
+                            return false;  
+                        }
+
+                        if(!IsEmail(document.getElementById("email").value)){
+                            alert("邮箱地址错误");
+                            document.getElementById("email").focus();
+                            return false;  
+                        }
+
+                        if(!isTelCode(document.getElementById("tel").value)){
+                            alert("电话号码不对");
+                            document.getElementById("tel").focus();
+                            return false;  
+                        }
+
+                        /*运行到这里说明验证通过返回true    submit提交按钮起作用提交表单*/
+                        alert("提交成功")
+                        return false;   // 这边设置禁止提交，实际项目需要改为 true
+                    }
+                </script>    
+                <script>
+                    /**
+                     * [reg 百度网盘链接匹配]
+                     * 说明：匹配支持百度分享的两种链接格式
+                     * 格式一：链接: https://pan.baidu.com/s/15gzY8h3SEzVCfGV1xfkJsQ 提取码: vsuw 复制这段内容后打开百度网盘手机App，操作更方便哦
+                     * 格式二：http://pan.baidu.com/share/link?shareid=179436&uk=3272055266 提取码: vsuw 复制这段内容后打开百度网盘手机App，操作更方便哦
+                     * 匹配出下载地址和提取码，并且还支持如果没有提取码，也能匹配出下载链接。
+                     * @type {正则表达式}
+                     * @return array 返回匹配成功的链接和地址
+                     */
+
+                    function baiduDownLinkArr( string ){
+                    var reg = /([http|https]*?:\/\/pan\.baidu\.com\/[(?:s\/){0,1}|(share)]*(?:[0-9a-zA-Z?=&])+)(?:.+:(?:\s)*)?([a-zA-Z]{4})?/;
+                    console.log(reg.exec(string));
+                    }
+                </script>
+                <script>
+                    //正则捕获，转换时间格式：
+                    const str = '20210426141823';
+                    const s = str.replace(/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/, (_, ...args) => {
+                    const [year, month, day, h, d, s] = args;
+                    return `${year}年${month}月${day} ${h}时${d}分${s}秒`
+                    });
+
+                    console.log(s);
+                    // 2021年04月26 14时18分23秒
+                </script>
+            </div>
+        </div>
+
+        <div>
+            <h2>next about try catch finally</h2>
+            <div>
+                <p>不管输入是否正确，输入框都会再输入后清空。</p>
+                <p>请输入 5 ~ 10 之间的数字：</p>
+                <input id = "function6" type="text">
+                <button type = "button" onclick="function6()">点我</button>
+                <p
+            </div>
+        </div>
     </body>
 </html>
